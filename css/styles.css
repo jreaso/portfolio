@@ -1,0 +1,83 @@
+body {
+    background-color: #fff;
+}
+.center-text {
+    text-align: center;
+}
+.links-container a {
+    margin-right: 20px; /* Adjust the value as needed */
+}
+
+
+
+
+
+
+/* Updated CSS */
+.card {
+    display: flex;
+    /*border: none;*/
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 0; /* Sharp corners for the card */
+    overflow: hidden;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    align-items: center;
+}
+
+.card-img-container {
+    flex: 1;
+    overflow: hidden;
+    min-width: 40%; /* Minimum width for the image container (1/4 of the card's width) */
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0; /* Sharp corners for the image */
+}
+
+.card-body {
+    flex: 3; /* Adjust this value to control the content width */
+    padding: 20px;
+}
+
+/* Add any additional styling as needed */
+
+
+/* CSS */
+.badge-link {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px; /* Optional spacing between links */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skill-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #f0f0f0; /* Gray background color */
+    color: #666; /* Slightly lighter text color (adjust as needed) */
+    border-radius: 20px; /* Round corners to make it pill-shaped */
+    margin-right: 5px; /* Add spacing between the skill tags */
+    font-size: 12px; /* Adjust the font size as needed */
+}

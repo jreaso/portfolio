@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamie Reason Portfolio</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+
+
+
+
+
+    <div class="container mt-5">
+
+
+        <div class="center-text">
+            <h1 class="display-8 fw-bold">Jamie Reason Portfolio</h1>
+            <div class="links-container">
+                <a href="https://github.com/jreaso" class="text-decoration-none"><i class="fa fa-github"></i> GitHub</a>
+                <a href="https://www.kaggle.com/jreaso" class="text-decoration-none"><i class="fa-brands fa-kaggle"></i> Kaggle</a>
+                <a href="https://www.linkedin.com/in/jamie-reason/" class="text-decoration-none"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div >
+        <div class="mt-2">
+            <p class="text-body-secondary">I'm Jamie, I'm a Maths student interested in Machine Learning, Data and Number Theory. This portfolio shows a selection of projects I've worked on, for more check out my GitHub.</p>
+        </div>
+
+        <div class="bot center-text">
+
+            <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+            <img alt="SQL" src="https://img.shields.io/badge/SQL-28A745?style=for-the-badge&logo=sql&logoColor=white&color=28A745"/>
+            <img alt="R" src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white"/>
+
+            
+            
+            <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+            <img alt="pandas" src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+
+            
+            <img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+            <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+            <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+            <img alt="Keras" src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white"/>
+        </div>
+            
+        
+
+        <!--
+        Full Projects
+        - Surf Forecast and Video Dataset
+        - Time Machine Surf Camera
+        - Symptom Log (Prototype and Evolution - FastAPI)
+        Data Visualisation
+        ML Modelling
+        Deep Learning
+        -->
+
+        <!--
+            https://github.com/jreaso/car-fuel
+            https://github.com/jreaso/M5-buoy
+            https://github.com/jreaso/smith-normal-form
+        -->
+
+        
+
+        
+          
+
+        <div class="card" id="surf-video-dataset">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/surf-db.png" class="card-img" alt="Project 1">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Surf Video and Forecasts Dataset</h3>
+                    <h6 class="card-text">Create a dataset of videos of surf spots along with hourly forecasts.</h6>
+                    <p class="card-text">
+                        I used Surfline's forecast API to periodically (approximately daily) update a database with the surf forecast for several surf spots. I also scrape Surfline using Selenium to find the links to the CDN server for rewind clips of the surf cams. These are 10 minute videos taken back to back constantly. Once the links to the CDN server have been catalogued along with their timestamp, I select one video an hour whilst there is sunlight, then download and process the video. Processing is done with FFMPEG and is simply cutting the video to 60s and compressing it.
+                    </p>
+
+                    <a href="https://github.com/jreaso/surf-forecast-videos" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/timemachine-surf-cam.png" class="card-img" alt="Project 1">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Time Machine Surf Cam</h3>
+                    <h6 class="card-text">Surf cam footage (for forecast conditions) for days in the future.</h6>
+                    <p class="card-text">
+                        I used the <a href="#surf-video-dataset">surf video and forecast dataset</a> I had created and clustered frecasts together so that given a new forecast  I could find it's nearest neighbour in the dataset and show the corresponding video.
+                    </p>
+
+                    <a href="https://github.com/jreaso/surf-forecast-videos" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+
+                    <a href="#" class="badge-link">
+                        <img align="center" alt="PDF Report" src="https://img.shields.io/badge/Project Report-FF0000?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/symptom-visualisation-dashboard.png" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Symptom Visualisation Dashboard</h3>
+                    <h6 class="card-text">Custom dashboard to display pain severity for patient and medical device activity.</h6>
+                    <p class="card-text">
+                        I initially built this project for my dad, whilst he was in hospital. The datasource was a google sheets table which was updated by a google forms. It tracked pain severity of different body parts, overall wellbeing and crucially whether a medical device (neuro stimulator) was turned on or off. This dashboard displayed this data in an R shiny app and was deployed so doctors could see if this medical device was working. The github repo only conains an anonymized (synthetic, unlabelled data) version of this.
+                    </p>
+
+                    <a href="#" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/buoy-plot.png" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Analysis of Global Buoy Data</h3>
+                    <p class="card-text">
+                        I use Google BigQuery to investigate the <b>NOAA ICOADS</b> database. I explore interesting variables and plot global buoy locations. I then focus on a specific buoy and calculate moving averages of various variables with SQL window functions.
+                    </p>
+
+                    <a href="https://www.kaggle.com/code/jreaso/analysis-of-buoy-data-in-noaa-icoads" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/Kaggle Notebook-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/wvht-pred.png" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Hawaii Waveheight Prediction</h3>
+                    <h6 class="card-text">Predicts waveheights in Oahu, Hawaii with offshore buoy data.</h6>
+                    <p class="card-text">
+                        I use an XGBoost model to use offshore buoy data to predict max recorded waveheights on west of Oahu, Hawaii.
+                    </p>
+
+                    <a href="https://github.com/jreaso/wvht-pred" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/crime-dashboard.png" class="card-img" alt="Project 1">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Durham Police Dashboard</h3>
+                    <h6 class="card-text">Interactive shiny dashboard to display crime data from the UK Police API.</h6>
+                    <p class="card-text">
+                        Interactive dashboard to show UK Police data for Durham. You can select a constituency and a month period and it shows a barchart for categories of crimes along with an interactive map showing the locations. I built this app with r and shiny whilst at university in Durham, and it was interesting to see the crime show up on the map from when somebody stole my numberplates!
+                    </p>
+
+                    <a href="https://jreaso.shinyapps.io/durham-police-dashboard/" class="badge-link">
+                        <img align="center" alt="Shiny App" src="https://img.shields.io/badge/Shiny App-00BFFF?style=for-the-badge&logo=R&logoColor=white&color=6690BB"/>
+                    </a>
+
+                    <a href="https://github.com/jreaso/durham-police-dashboard" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/lean.png" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Smith Normal Form Lean 3 Formalisation</h3>
+                    <p class="card-text">
+                        This project formalises some linear algebra lemmas in <a href="https://leanprover-community.github.io/">Lean 3</a>, a functional programming language. This was part of a research project and although I didn't prove the full theorem I set out to prove, I made good progress proving lemmas it relied on and learnt lots about functional programming.
+                    </p>
+
+                    <a href="https://github.com/jreaso/smith-normal-form" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <footer class="bg-light text-center py-3">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; Jamie Reason 2023</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
