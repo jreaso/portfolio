@@ -32,7 +32,7 @@
             </div>
         </div >
         <div class="mt-2">
-            <p class="text-body-secondary">I'm Jamie, I'm a Maths student interested in Machine Learning, Data and Number Theory. This portfolio shows a selection of projects I've worked on, for more check out my GitHub.</p>
+            <p class="text-body-secondary">I'm Jamie, I'm a final year Maths student interested in Machine Learning, Bayesian Statistics and Data. This portfolio shows a selection of projects I've worked on, for more check out my GitHub.</p>
         </div>
 
         <div class="bot center-text">
@@ -49,8 +49,10 @@
             
             <img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
             <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-            <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
-            <img alt="Keras" src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white"/>
+            <!--<img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+            <img alt="Keras" src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white"/>-->
+
+            <img alt="Django" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
         </div>
             
         
@@ -84,7 +86,7 @@
                     <h3 class="card-title">Surf Video and Forecasts Dataset</h3>
                     <h6 class="card-text">Create a dataset of videos of surf spots along with hourly forecasts.</h6>
                     <p class="card-text">
-                        I used Surfline's forecast API to periodically (approximately daily) update a database with the surf forecast for several surf spots. I also scrape Surfline using Selenium to find the links to the CDN server for rewind clips of the surf cams. These are 10 minute videos taken back to back constantly. Once the links to the CDN server have been catalogued along with their timestamp, I select one video an hour whilst there is sunlight, then download and process the video. Processing is done with FFMPEG and is simply cutting the video to 60s and compressing it.
+                        I used Surfline's forecast API to periodically (approximately daily) update a database with the surf forecast for several surf spots. I also scrape Surfline using Selenium to find the links to the CDN server for rewind clips of the surf cams. These are 10 minute videos taken back to back continuously. Once the links to the CDN server have been catalogued along with their timestamp, I select one video an hour whilst there is sunlight, then download and process the video. Processing is done with FFMPEG and is simply cutting the video to 60s and compressing it.
                     </p>
 
                     <a href="https://github.com/jreaso/surf-forecast-videos" class="badge-link">
@@ -96,7 +98,7 @@
 
 
 
-
+<!--
         <div class="card">
             <div class="card-content">
                 <div class="card-img-container">
@@ -106,10 +108,10 @@
                     <h3 class="card-title">Time Machine Surf Cam</h3>
                     <h6 class="card-text">Surf cam footage (for forecast conditions) for days in the future.</h6>
                     <p class="card-text">
-                        I used the <a href="#surf-video-dataset">surf video and forecast dataset</a> I had created and clustered frecasts together so that given a new forecast  I could find it's nearest neighbour in the dataset and show the corresponding video.
+                        This project clusters surf forecasts by similarity so that given a new forecast (via Surfline API), we predict a datetime in the past (in the database) with the highest forecast similarity. This builds on the <a href="#surf-video-dataset">surf video and forecast dataset</a> to deliver videos of the nearest datetime.
                     </p>
 
-                    <a href="https://github.com/jreaso/surf-forecast-videos" class="badge-link">
+                    <a href="#" class="badge-link">
                         <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
                     </a>
 
@@ -118,9 +120,33 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>-->
         
 
+        <div class="card" id="symptom-log">
+            <div class="card-content">
+                <div class="card-img-container">
+                    <img src="images/symptom-log.png" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Symptom Log</h3>
+                    <h6 class="card-text">Django website to track and monitor patient symptoms for clinicians to review.</h6>
+                    <p class="card-text">
+                        This is a django website which allows clinicians to create custom forms (made up of different question styles) for patients to fill in. This allows patient's symptoms to be monitored and recorded so that doctors can easily view how a patient's condition is progressing and view patterns with symptoms and treatments. <br>
+                        <em>This project is currently under development and charts for visualisation are not yet implemented.</em>
+                    </p>
+
+                    <a href="https://github.com/jreaso/symptom-log" class="badge-link">
+                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
+                    </a>
+
+                    <a href="https://youtu.be/N2r6bKmZvZc" class="badge-link">
+                        <img align="center" alt="Video Demo" src="https://img.shields.io/badge/Video Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
 
 
 
@@ -130,13 +156,13 @@
                     <img src="images/symptom-visualisation-dashboard.png" class="card-img">
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">Symptom Visualisation Dashboard</h3>
+                    <h3 class="card-title">Symptom Visualisation Dashboard (R Shiny)</h3>
                     <h6 class="card-text">Custom dashboard to display pain severity for patient and medical device activity.</h6>
                     <p class="card-text">
-                        I initially built this project for my dad, whilst he was in hospital. The datasource was a google sheets table which was updated by a google forms. It tracked pain severity of different body parts, overall wellbeing and crucially whether a medical device (neuro stimulator) was turned on or off. This dashboard displayed this data in an R shiny app and was deployed so doctors could see if this medical device was working. The github repo only conains an anonymized (synthetic, unlabelled data) version of this.
+                        This project was the motivation and starting point of <a href="#symptom-log">Symptom Log</a>. I initially built this project for my dad, whilst he was in hospital. The datasource was a google sheets table which was updated by a google forms. It tracked pain severity of different body parts, overall wellbeing and crucially whether a medical device (neuro stimulator) was turned on or off. This dashboard displayed this data in an R shiny app and was deployed so doctors could see if this medical device was working. The github repo only conains an anonymized (synthetic, unlabelled data) version of this for privacy.
                     </p>
 
-                    <a href="#" class="badge-link">
+                    <a href="https://github.com/jreaso/symptom-visualisation" class="badge-link">
                         <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
                     </a>
                 </div>
@@ -234,41 +260,21 @@
         <div class="card">
             <div class="card-content">
                 <div class="card-img-container">
-                    <img src="images/test.png" class="card-img">
+                    <img src="images/car-fuel.png" class="card-img">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">Car Fuel Analysis</h3>
                     <h6 class="card-text">Analysis of my car's fuel efficiency in different conditions.</h6>
                     <p class="card-text">
-                        ...
+                        This is a small project to visualise my cars fuel efficency in different conditions and plot total mileage aswell as other interesting metrics.
                     </p>
 
-                    <a href="#" class="badge-link">
+                    <a href="https://github.com/jreaso/car-fuel" class="badge-link">
                         <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
                     </a>
                 </div>
             </div>
         </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-img-container">
-                    <img src="images/test.png" class="card-img">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Filler</h3>
-                    <h6 class="card-text">Filler</h6>
-                    <p class="card-text">
-                        ...
-                    </p>
-
-                    <a href="#" class="badge-link">
-                        <img align="center" alt="GitHub" src="https://img.shields.io/badge/GitHub Repo-181717?style=for-the-badge&logo=github&logoColor=white"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-
 
 
 
